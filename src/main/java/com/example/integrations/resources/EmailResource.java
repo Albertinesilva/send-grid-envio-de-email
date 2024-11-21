@@ -18,7 +18,7 @@ public class EmailResource {
   private EmailService emailService;
 
   @PostMapping
-  public ResponseEntity<Void> sendEmail(@RequestBody EmailDTO emailDTO) {
+  public ResponseEntity<Void> sendEmailMessage(@RequestBody EmailDTO emailDTO) {
     emailService.sendEmail(emailDTO);
     return ResponseEntity.noContent().build();
   }
